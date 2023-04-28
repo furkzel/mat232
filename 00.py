@@ -1,12 +1,10 @@
-import pygame
-import time
 import random
 import math
 
 class Card:
 
     suits = ["Spades", "Hearts", "Diamonds", "Clubs"]
-    values = {'A':1, '2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, '10':10, 'J':10, 'Q':12, 'K':13}
+    values = {'A':1, '2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, '10':10, 'J':11, 'Q':12, 'K':13}
     symbols = {'Spades': '♠', 'Hearts': '♥', 'Diamonds': '♦', 'Clubs': '♣'}
 
     def __init__(self, suit, value):
@@ -208,7 +206,7 @@ class PriorityQueue:
 deck = Deck()
 deck.shuffle()
 
-# Then, we will create a priority queue and insert all the cards into it.
+# Then, we will create a priority queue and insert all the cards into it.a
 pq = PriorityQueue(4)
 for card in deck.cards:
     pq.insert(card)
@@ -261,5 +259,6 @@ for card in deck.cards:
     cards.append(card)
 
 # Finally, we will sort the cards using d-heapsort and print them out.
-d_heapsort(cards, 4)
+d_heapsort(cards, 1)
 print(cards)
+print(deck.cards)
